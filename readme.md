@@ -22,7 +22,20 @@ How to run the run_analysis.R
 4. In the R Studio, type the following command:
 a.	source("run_analysis.R")
 b.	run_analysis()
-5. The system will automatically download the dataset to reproduce a new tidy dateset.
+5. The script will automatically download the dataset to reproduce a new tidy dateset through following steps:
+a. 	Download and exact the dataset into the data folder
+b. 	Merges the training and the test sets to create one data set
+i.	Read and merge the Activity files, subject files and features files
+ii.	set names to variables
+iii.	Merge columns to get the data frame Data for all data
+c. 	Extracts only the measurements on the mean and standard deviation for each measurement
+i. 	Subset Name of Features by measurements on the mean and standard deviation
+ii.	Subset the data frame Data by seleted names of Features
+d. 	Uses descriptive activity names to name the activities in the data set
+i. 	Read descriptive activity names from "activity_labels.txt"
+ii. 	Names of Features will labeled using descriptive variable names
+e.	Appropriately labels the data set with descriptive variable names.
+f.	From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject
 6. Once it is done, it will create a new file in the working directory, that is tidydata.txt
 
 
